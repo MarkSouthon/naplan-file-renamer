@@ -1,5 +1,4 @@
 import os, csv 
-from tqdm import tqdm
  
 def main():
     stud_file = open('student_list.csv')
@@ -24,7 +23,7 @@ def main():
         lookup_dict[name] = code
         
      
-    for count, filename in enumerate(tqdm(os.listdir(in_folder))):
+    for count, filename in enumerate(os.listdir(in_folder)):
         student_name = os.path.basename(filename)
         src =f"{in_folder}/{filename}"
         # remove '.pdf'
